@@ -9,10 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LandingPage_Accuweather {
-	public WebDriver driver; 
-	
-	//private @FindBy(xpath = "//input[@name='commit']") WebElement Submit;
-	
+	public WebDriver driver; 	
 	private @FindBy(xpath="//div[text()='I Understand']") WebElement popUp_01;
 	private @FindBy(xpath="//button[text()='No, Thanks']") WebElement popUp_02;
 	private @FindBy(css="svg.pro-tip__close.close-icon" ) WebElement popUp_03;
@@ -35,7 +32,7 @@ public class LandingPage_Accuweather {
 	public void input_City() {
 		Input_TextField.sendKeys("Delhi");
 	}
-	public void autosuggest_Drop() {
+	public Weather_Details autosuggest_Drop() {
 		List<WebElement> options = driver.findElements(By.cssSelector("div.results-container div"));
 		
 		for(WebElement store : options) {
@@ -44,6 +41,8 @@ public class LandingPage_Accuweather {
 				break;
 			}
 		}
+		Weather_Details wd = new Weather_Details(driver);
+		return wd;
 	}
 	
 }
