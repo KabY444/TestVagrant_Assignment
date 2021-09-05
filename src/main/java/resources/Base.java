@@ -13,14 +13,13 @@ public class Base {
 
 	public WebDriver initializeDriver() throws IOException {
 		Properties prop = new Properties();
-
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Global.properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\kanis\\eclipse-workspace\\TestVagrant\\src\\main\\java\\resources\\Global.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		String website = prop.getProperty("UI_Source");
 
 		if (browserName.equalsIgnoreCase("FireFox")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Automation_WorkSpace\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 		if(website.equalsIgnoreCase("https://www.accuweather.com/")) {
