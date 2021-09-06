@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.Framework.TestVagrant.Test_Case_02">
+      <class name="com.Framework.TestVagrant.Test_Case">
         <methods>
-          <include name="TC_02"/>
+          <include name="comparison"/>
           <include name="setUp"/>
           <include name="closeBrowsers"/>
         </methods>
-      </class> <!-- com.Framework.TestVagrant.Test_Case_02 -->
+      </class> <!-- com.Framework.TestVagrant.Test_Case -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

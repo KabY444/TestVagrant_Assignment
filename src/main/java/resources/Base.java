@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
-	public WebDriver driver;
+	public  WebDriver driver;
 
 	public WebDriver initializeDriver() throws IOException {
 		Properties prop = new Properties();
